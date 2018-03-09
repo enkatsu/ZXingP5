@@ -12,10 +12,31 @@ buildDir='library'
 libsDirName='./'
 docsDirName='../reference'
 
+task buildLibrary(type: GradleBuild, dependsOn: clean) { }
+
 javadoc {
+    options {
+        charSet = 'UTF-8'
+        encoding = 'UTF-8'
+        locale = 'en_US'
+    }
+    destinationDir = file('reference')
+}
+
+task javaDocEn(type: Javadoc, dependsOn: clean) {
+    source = sourceSets.main.allJava
+    destinationDir = file('reference/en')
     options.charSet = 'UTF-8'
     options.encoding = 'UTF-8'
-    destinationDir = file('reference')
+    options.locale = 'en_US'
+}
+
+task javaDocJp(type: Javadoc, dependsOn: clean) {
+    source = sourceSets.main.allJava
+    destinationDir = file('reference/jp')
+    options.charSet = 'UTF-8'
+    options.encoding = 'UTF-8'
+    options.locale = 'ja_JP'
 }
 
 repositories {

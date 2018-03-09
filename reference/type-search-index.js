@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"QRReader","h":"","u":""},{"l":"QRWriter","h":"","u":""}]

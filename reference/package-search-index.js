@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"com.github.endoh0509.zxingp5","h":"","u":""}]
