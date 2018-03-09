@@ -25,7 +25,7 @@ javadoc {
 
 task javaDocEn(type: Javadoc, dependsOn: clean) {
     source = sourceSets.main.allJava
-    destinationDir = file('reference/en')
+    destinationDir = file('docs/en')
     options.charSet = 'UTF-8'
     options.encoding = 'UTF-8'
     options.locale = 'en_US'
@@ -33,7 +33,7 @@ task javaDocEn(type: Javadoc, dependsOn: clean) {
 
 task javaDocJp(type: Javadoc, dependsOn: clean) {
     source = sourceSets.main.allJava
-    destinationDir = file('reference/jp')
+    destinationDir = file('docs/jp')
     options.charSet = 'UTF-8'
     options.encoding = 'UTF-8'
     options.locale = 'ja_JP'
