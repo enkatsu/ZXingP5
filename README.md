@@ -66,4 +66,10 @@ void draw() {
 }
 ```
 
+## JavaDoc
+
+https://endoh0509.github.io/ZXingP5/en/
+
+## License
+
 This software includes the work that is distributed in the Apache License 2.0
