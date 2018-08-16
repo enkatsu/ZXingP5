@@ -1,9 +1,12 @@
 package com.github.endoh0509.zxingp5;
 
-
-import processing.core.*;
-import com.google.zxing.common.*;
-import com.google.zxing.*;
+import processing.core.PApplet;
+import processing.core.PImage;
+import processing.core.PGraphics;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 
 /**
  * @author Katsuya Endoh
@@ -14,7 +17,7 @@ public class QRWriter {
     // app is a reference to the parent sketch
     private PApplet app;
 
-    private com.google.zxing.qrcode.QRCodeWriter writer;
+    private QRCodeWriter writer;
     private boolean[][] bits;
     private BitMatrix bitMatrix;
 
@@ -25,7 +28,7 @@ public class QRWriter {
      */
     public QRWriter(PApplet app) {
         this.app = app;
-        this.writer = new com.google.zxing.qrcode.QRCodeWriter();
+        this.writer = new QRCodeWriter();
     }
 
     /**
@@ -49,6 +52,16 @@ public class QRWriter {
         }
         pg.endDraw();
         return pg.get();
+    }
+
+    /**
+     * @param width int
+     * @param height int
+     * @return Encoded QR code instance.
+     */
+    public QRCode getQRCode(int width, int height) {
+        QRCode qr = new QRCode(this.app, this.bits);
+        return new QRCode(this.app, this.bits);
     }
 
     /**

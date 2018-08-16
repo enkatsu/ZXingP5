@@ -1,14 +1,13 @@
 package com.github.endoh0509.zxingp5;
 
-
+import processing.core.PApplet;
+import processing.core.PImage;
+import processing.core.PVector;
 import com.google.zxing.*;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.GlobalHistogramBinarizer;
 import com.google.zxing.common.HybridBinarizer;
-import processing.core.PApplet;
-import processing.core.PImage;
-import processing.core.PVector;
 import java.awt.image.BufferedImage;
 
 /**
@@ -21,7 +20,7 @@ public class QRReader {
     private PApplet app;
     private QRCodeReader reader;
     private Result result = null;
-    public final static String VERSION = "1.0.0";
+    private final static String VERSION = "1.0.0";
 
     /**
      * @param app A PApplet representing the user sketch, i.e "this"
@@ -57,7 +56,6 @@ public class QRReader {
             // e.printStackTrace();
             this.result = null;
         }
-
         if (this.result != null && this.result.getText() != null) {
             return this.result.getText();
         }

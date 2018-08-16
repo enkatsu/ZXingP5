@@ -1,0 +1,10 @@
+-locale 'en_US'
+-charset 'UTF-8'
+-d '/Users/katsuya/Documents/develop/Processing/libraries/ZXingP5/docs/en'
+-doctitle 'ZXingP5  API'
+-encoding 'UTF-8'
+-quiet 
+-windowtitle 'ZXingP5  API'
+'/Users/katsuya/Documents/develop/Processing/libraries/ZXingP5/src/main/java/com/github/endoh0509/zxingp5/QRCode.java'
+'/Users/katsuya/Documents/develop/Processing/libraries/ZXingP5/src/main/java/com/github/endoh0509/zxingp5/QRReader.java'
+'/Users/katsuya/Documents/develop/Processing/libraries/ZXingP5/src/main/java/com/github/endoh0509/zxingp5/QRWriter.java'
