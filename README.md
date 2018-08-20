@@ -11,23 +11,22 @@ ZXingP5 is based on [ZXing](https://github.com/zxing/zxing).
 ### QRWriter
 
 ```
-import enkatsu.zxingp5.*;
+import processing.awt.PSurfaceAWT;
+import com.github.endoh0509.zxingp5.*;
 
 QRWriter writer;
 PImage img;
 
 void setup() {
   size(200, 200);
-
   writer = new QRWriter(this);
-  // writer.encode(EncodeString, QRCodeVersion);
   writer.encode("Hello QR Code!!", 2);
   img = writer.getImage(width, height);
   println(writer);
 }
 
 void draw() {
-  image(img, 0, 0);
+  image(img, 0, 0, width, height);
 }
  ```
 
