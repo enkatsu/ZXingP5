@@ -31,11 +31,13 @@ public class QRReader {
     }
 
     /**
+     *
      * @param img Image to decode
      * @param globalHistogram Global histogram
+     * @param printError Flag for displaying error message at decoding
      * @return Decoded text
      */
-    public String decode(PImage img, boolean globalHistogram) {
+    public String decode(PImage img, boolean globalHistogram, boolean printError) {
         BufferedImage buf = (BufferedImage) img.getNative();
         LuminanceSource source = new BufferedImageLuminanceSource(buf);
         BinaryBitmap bitmap;
@@ -47,14 +49,14 @@ public class QRReader {
         try {
             this.result = reader.decode(bitmap);
         } catch (NotFoundException e) {
-            // e.printStackTrace();
             this.result = null;
+            if(printError) PApplet.println(e);
         } catch (ChecksumException e) {
-            // e.printStackTrace();
             this.result = null;
+            if(printError) PApplet.println(e);
         } catch (FormatException e) {
-            // e.printStackTrace();
             this.result = null;
+            if(printError) PApplet.println(e);
         }
         if (this.result != null && this.result.getText() != null) {
             return this.result.getText();
@@ -63,11 +65,21 @@ public class QRReader {
     }
 
     /**
+     *
+     * @param img Image to decode
+     * @param globalHistogram Global histogram
+     * @return Decoded text
+     */
+    public String decode(PImage img, boolean globalHistogram) {
+        return this.decode(img, globalHistogram, false);
+    }
+
+    /**
      * @param img Image to decode
      * @return Decoded text
      */
     public String decode(PImage img) {
-        return this.decode(img, true);
+        return this.decode(img, true, false);
     }
 
     /**

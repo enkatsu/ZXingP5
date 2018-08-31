@@ -109,7 +109,7 @@ public class QRWriter {
      * @return Bits from encoded QR code.
      */
     public boolean[][] encode(String src, int version) {
-        if(1 > version || version > 40) {
+        if(1 > version || version >= 40) {
             return null;
         }
         int size = 21 + version * 4;
