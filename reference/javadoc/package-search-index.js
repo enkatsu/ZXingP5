@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"com.github.endoh0509.zxingp5"},{"l":"すべてのパッケージ","u":"allpackages-index.html"}];updateSearchResults();

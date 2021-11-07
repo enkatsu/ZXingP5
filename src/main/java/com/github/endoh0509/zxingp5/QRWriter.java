@@ -20,7 +20,9 @@ public class QRWriter {
     private QRCodeWriter writer;
     private boolean[][] bits;
     private BitMatrix bitMatrix;
-
+    /**
+     * Library version
+     */
     public final static String VERSION = "1.0.0";
 
     /**
@@ -117,6 +119,9 @@ public class QRWriter {
         return bits;
     }
 
+    /**
+     * @return BitMatrix
+     */
     public BitMatrix getBitMatrix() {
         return this.bitMatrix;
     }

@@ -18,6 +18,7 @@ public class QRCode {
     static final int IMAGE_FORMAT = PApplet.RGB;
     /**
      * @param app A PApplet representing the user sketch, i.e "this"
+     * @param bitmap bitmap
      */
     public QRCode(PApplet app, BinaryBitmap bitmap) {
         this.app = app;
@@ -25,22 +26,42 @@ public class QRCode {
         this.initColor();
         this.setPixels(bitmap);
     }
+
+    /**
+     * @param app A PApplet representing the user sketch, i.e "this"
+     * @param bitmap bitmap
+     */
     public QRCode(PApplet app, boolean[][] bitmap) {
         this.app = app;
         this.img = app.createImage(bitmap[0].length, bitmap.length, QRCode.IMAGE_FORMAT);
         this.initColor();
         this.setPixels(bitmap);
     }
+
+    /**
+     * @param app A PApplet representing the user sketch, i.e "this"
+     * @param bitmap binary array
+     * @param width image width
+     * @param height image width
+     */
     public QRCode(PApplet app, boolean[] bitmap, int width, int height) {
         this.app = app;
         this.img = app.createImage(width, height, QRCode.IMAGE_FORMAT);
         this.initColor();
         this.setPixels(bitmap, width, height);
     }
+
+    /**
+     *
+     */
     private void initColor() {
         this.colorOn = 0x000000;
         this.colorOff = 0xFFFFFF;
     }
+
+    /**
+     * @param bitmap
+     */
     private void setPixels(BinaryBitmap bitmap) {
         for(int y = 0; y < bitmap.getHeight(); y++) {
             for(int x = 0; x < bitmap.getWidth(); x++) {
@@ -53,6 +74,7 @@ public class QRCode {
             }
         }
     }
+
     private void setPixels(boolean[][] bitmap) {
         for(int y = 0; y < bitmap.length; y++) {
             for(int x = 0; x < bitmap[y].length; x++) {
@@ -60,6 +82,7 @@ public class QRCode {
             }
         }
     }
+
     private void setPixels(boolean[] bitmap, int width, int height) {
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
@@ -67,9 +90,19 @@ public class QRCode {
             }
         }
     }
+
+    /**
+     * @return QR code image
+     */
     public PImage getImage() {
         return this.img;
     }
+
+    /**
+     * @param width image width
+     * @param height image height
+     * @return QR code image
+     */
     public PImage getImage(int width, int height) {
         PImage img = this.img.copy();
         img.resize(width, height);
