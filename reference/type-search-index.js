@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"com.github.endoh0509.zxingp5","l":"QRCode"},{"p":"com.github.endoh0509.zxingp5","l":"QRReader"},{"p":"com.github.endoh0509.zxingp5","l":"QRWriter"},{"l":"すべてのクラス","u":"allclasses-index.html"}];updateSearchResults();
