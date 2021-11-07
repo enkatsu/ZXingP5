@@ -13,12 +13,12 @@ void setup() {
 }
 
 void draw() {
-  if (cam.available() == true) {
+  if (cam.available()) {
     cam.read();
     tint(255, 255);
     image(cam, 0, 0);
     String txt = reader.decode(cam);
-    if(txt != null){
+    if (txt != null) {
       println(txt);
     }
   }
