@@ -1,4 +1,4 @@
-package com.github.endoh0509.zxingp5;
+package org.enkatsu.zxingp5;
 
 import processing.core.PApplet;
 import processing.core.PImage;

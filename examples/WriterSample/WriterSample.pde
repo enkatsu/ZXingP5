@@ -1,5 +1,5 @@
 import processing.awt.PSurfaceAWT;
-import com.github.endoh0509.zxingp5.*;
+import org.enkatsu.zxingp5.*;
 
 QRWriter writer;
 PImage img;

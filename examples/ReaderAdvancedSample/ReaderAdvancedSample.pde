@@ -1,5 +1,5 @@
 import processing.video.*;
-import com.github.endoh0509.zxingp5.*;
+import org.enkatsu.zxingp5.*;
 
 Capture cam;
 QRReader reader;

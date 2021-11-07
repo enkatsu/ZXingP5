@@ -6,8 +6,8 @@ apply plugin: 'java'
 defaultTasks 'clean', 'build'
 
 setSourceCompatibility(1.8)
-rootProject.setVersion('1.0.0')
 setBuildDir('library')
+setLibsDirName('./')
 
 task buildLibrary(type: GradleBuild, dependsOn: clean) {}
 
@@ -37,6 +37,8 @@ clean.doFirst {
 
 jar {
     from configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    baseName 'ZXingP5'
+    version ''
 }
 
 compileJava {
