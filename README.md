@@ -6,11 +6,11 @@
 ZXingP5 is QR Code library for Processing.  
 ZXingP5 is based on [ZXing](https://github.com/zxing/zxing).
 
-## How to
+## Usage
 
 ### QRWriter
 
-```
+```pde
 import processing.awt.PSurfaceAWT;
 import com.github.endoh0509.zxingp5.*;
 
@@ -32,7 +32,7 @@ void draw() {
 
 ### QRReader
 
-```
+```pde
 import processing.video.*;
 import enkatsu.zxingp5.*;
 
