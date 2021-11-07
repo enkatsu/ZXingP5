@@ -67,7 +67,7 @@ void draw() {
 
 ## JavaDoc
 
-https://enkatsu.github.io/ZXingP5/reference/
+https://enkatsu.github.io/ZXingP5/reference/index.html
 
 ## License
 
