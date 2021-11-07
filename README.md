@@ -4,7 +4,7 @@
 ## Introduction
 
 ZXingP5 is QR Code library for Processing.  
-ZXingP5 is based on [ZXing](https://github.com/zxing/zxing).
+This is based on [ZXing](https://github.com/zxing/zxing).
 
 ## Usage
 
