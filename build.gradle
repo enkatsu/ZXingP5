@@ -7,7 +7,7 @@ defaultTasks 'clean', 'build'
 
 setSourceCompatibility(1.8)
 rootProject.setVersion('1.0.0')
-setDocsDirName('../reference')
+ setDocsDirName('../reference')
 
 task buildLibrary(type: GradleBuild, dependsOn: clean) {}
 
@@ -53,4 +53,12 @@ javadoc {
     options.setEncoding('UTF-8')
     options.setLocale('en_US')
     classpath += configurations.provided
+}
+
+javadoc.doLast {
+    copy {
+        from 'reference/javadoc'
+        into 'reference'
+    }
+    delete 'reference/javadoc'
 }
