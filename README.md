@@ -11,8 +11,7 @@ This is based on [ZXing](https://github.com/zxing/zxing).
 ### QRWriter
 
 ```pde
-import processing.awt.PSurfaceAWT;
-import com.github.endoh0509.zxingp5.*;
+import org.enkatsu.zxingp5.*;
 
 QRWriter writer;
 PImage img;
@@ -34,7 +33,7 @@ void draw() {
 
 ```pde
 import processing.video.*;
-import enkatsu.zxingp5.*;
+import org.enkatsu.zxingp5.*;
 
 Capture cam;
 QRReader reader;
@@ -52,7 +51,7 @@ void draw() {
     cam.read();
     tint(255, 255);
     image(cam, 0, 0);
-    String txt = reader.decord(cam, true);
+    String txt = reader.decode(cam);
     println(txt);
     PVector[] points = reader.getPoints();
     if (points != null) {
