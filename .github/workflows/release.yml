@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Zip
         uses: montudor/action-zip@v0.1.0
-        run: |
-          zip -r ZXingp5.zip ./ -x "*.git*"
+        with:
+          args: zip -r ZXingp5.zip ./ -x "*.git*"
       - name: Create release
         id: create_release
         uses: actions/create-release@v1.0.0
