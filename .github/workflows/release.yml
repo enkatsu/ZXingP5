@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Zip
+        uses: montudor/action-zip@v0.1.0
         run: |
           zip -r ZXingp5.zip ./ -x "*.git*"
       - name: Create release
