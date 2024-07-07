@@ -11,6 +11,7 @@ import com.google.zxing.NotFoundException;
 
 public class QRCode {
     // app is a reference to the parent sketch
+    @SuppressWarnings("unused")
     private PApplet app;
     private PImage img;
     private int colorOn;

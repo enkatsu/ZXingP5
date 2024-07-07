@@ -17,6 +17,7 @@ import java.awt.image.BufferedImage;
 public class QRReader {
 
     // app is a reference to the parent sketch
+    @SuppressWarnings("unused")
     private PApplet app;
     private QRCodeReader reader;
     private Result result = null;
