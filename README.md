@@ -1,5 +1,5 @@
 # ZXingP5
-![top](https://github.com/endoh0509/ZXingP5/raw/master/img/top.png)
+![top](https://raw.githubusercontent.com/enkatsu/ZXingP5/main/img/top.png)
 
 ## Introduction
 

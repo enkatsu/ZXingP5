@@ -8,9 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Zip
-        uses: montudor/action-zip@v0.1.0
-        with:
-          args: zip -r ZXingp5.zip ./ -x "*.git*"
+        run: |
+          zip -r ./ZXingp5.zip . -i ./
       - name: Create release
         id: create_release
         uses: actions/create-release@v1.0.0
