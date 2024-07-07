@@ -62,7 +62,6 @@ public class QRWriter {
      * @return Encoded QR code instance.
      */
     public QRCode getQRCode(int width, int height) {
-        QRCode qr = new QRCode(this.app, this.bits);
         return new QRCode(this.app, this.bits);
     }
 

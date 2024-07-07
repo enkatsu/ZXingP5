@@ -69,7 +69,7 @@ public class QRCode {
                     this.img.pixels[y * bitmap.getWidth() + x]
                             = bitmap.getBlackMatrix().get(x, y) ? colorOn : colorOff;
                 } catch (NotFoundException e) {
-//                    e.printStackTrace();
+                   System.err.println(e.getMessage());
                 }
             }
         }
