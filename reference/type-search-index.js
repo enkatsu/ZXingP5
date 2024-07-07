@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"org.enkatsu.zxingp5","l":"QRCode"},{"p":"org.enkatsu.zxingp5","l":"QRReader"},{"p":"org.enkatsu.zxingp5","l":"QRWriter"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.enkatsu.zxingp5","l":"QRCode"},{"p":"org.enkatsu.zxingp5","l":"QRReader"},{"p":"org.enkatsu.zxingp5","l":"QRWriter"}];updateSearchResults();
